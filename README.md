@@ -25,7 +25,7 @@ repo sync
 ```
 
 ### Installing olympe-linux dependencies
-you can install the needed packages through the script they provided. It is located at `<your_working_repo>/parrot-groundsdk/products/olympe/linux/env/postinst`. However, this script will upgrade and install multiple packages. 
+You can install the needed packages through the script they provided. It is located at `<your_working_repo>/parrot-groundsdk/products/olympe/linux/env/postinst`. However, this script will upgrade and install multiple packages. 
 
 Thus, if you're consirned about this, I recommend you to manually install each repo's listed in this script.
 
@@ -50,6 +50,7 @@ This shell script can be executed outside of the workspace, the following comman
 ```
 source ~/<your_workspace>/parrot-groundsdk/./products/olympe/linux/env/shell
 ```
+I recommend you to write this command down in the .bashrc or .bash_alias file as another command such as `shellOlympe` to save time.
 
 #### Check your installation
 In the shell environment you've created in the previous step, you can check if the installation was successfull by the following command.
@@ -123,3 +124,5 @@ __NOTE:__ For the initial run of each drone, it may take a while to start up.
 
 Once simulation has started up, you will see your drone sitting at the origin of the gazebo simulator.
 
+## Next step...!
+Now move onto the src directory where you will launch the simulator and write a python script to control the drone there.
