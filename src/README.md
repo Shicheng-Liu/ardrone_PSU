@@ -5,7 +5,7 @@ We are referring from [this page](https://developer.parrot.com/docs/olympe/userg
 
 This readme will only show brief things. For futher info, go to the page above.
 
-## Write a python script
+# Write a python script
 We will create a simple python script (Just like a "Hello, World" program).
 
 In your working directory, create the following python script.
