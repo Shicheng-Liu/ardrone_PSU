@@ -32,3 +32,8 @@ sphinx /opt/parrot-sphinx/usr/share/sphinx/drones/anafi4k.drone::stolen_interfac
 Here, we are starting up the drone with a simplified front camera and without a wifi interface.
 
 Not just this example, but throughout the next procedures, any drone will be able to be reached with the virtual ethernet interface. The drones can be reached by "10.202.0.1".
+
+# Example 2
+_You can leave the simulation windows open._
+
+
