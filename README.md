@@ -6,6 +6,7 @@ Documenting and some works for the parrot_PSU
 * OpenGL 4.6.0 NVIDIA 390.87
 * Parrot-Sphinx 1.2.1
 * Parrot-Olympe 1.0.0
+* gazebo 8.6.0
 
 # Parrot-Olympe
 This is a SDK for working with remotely controlling the drones. It works with Python.
