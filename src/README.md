@@ -5,7 +5,7 @@ We are referring from [this page](https://developer.parrot.com/docs/olympe/userg
 
 This readme will only show brief things. For futher info, go to the page above.
 
-# Example 1
+# Example 1 - Initial take off
 ## Write a Python script
 We will create a simple python script (Just like a "Hello, World" program).
 
@@ -33,7 +33,15 @@ Here, we are starting up the drone with a simplified front camera and without a 
 
 Not just this example, but throughout the next procedures, any drone will be able to be reached with the virtual ethernet interface. The drones can be reached by "10.202.0.1".
 
-# Example 2
+Now create a shell environment for your Olympe, if haven't done so.
+```
+source <path_to_your_groundsdk_place>/./products/olympe/linux/env/shell
+```
+
+In the shell environment, do `python takeoff.py`.
+You should see your drone taking off into the air.
+
+# Example 2 - Get the state of the drone
 _You can leave the simulation windows open._
 
 __NOTE:__ There will be a ton of log messages so keep an eye out for the `print` command in this example.
@@ -63,3 +71,76 @@ Execute this script in the same shell environment you prepared in Example 1
 ```
 (olympe-python3)$ python ./maxtiltget.py
 ```
+
+If all goes well, you should see the following results. 
+
+__NOTE:__ I couldn't see any because there were so many log outputs. Trying to figure out how I could disable them. I did see the `print` line so the program did succesfully catch the state. 2019/06/20
+
+
+Here, in the arsdk protocol defined in arsdk-xml does not provide a way to report errors. Thus, Olympe associates to each command a default timeout that can be overdriven with the *_timeout* message parameter.
+```
+maxTiltAction = drone(MaxTilt(10, _timeout=1)).wait()
+```
+
+# Example 3 - Changing the drone state
+
+In this example, we will change the _maximum tilt_ drone setting.
+For ANAFI the maximum tilt setting must be within 5 and 40 degrees.
+
+First, reset the simulation (Ctrl+R inside gazebo)
+
+
+```python
+from __future import print_function
+import olympe
+from olympe.messages.ardrone3.PilotingSettings import MaxTilt
+
+drone = olympe.Drone("10.202.0.1")
+drone.connection()
+maxTiltAction = drone(MaxTilt(10)).wait()
+if maxTiltAction.success():
+    print("MaxTilt(10) success")
+elif maxtiltAction.timedout():
+    print("MaxTilt(10) timedout):
+else:
+    # If ".wait()" is called on the _maxTiltAction_ this shouldn't happen
+    print("MaxTilt(10) is still in progress")
+maxtiltAction = drone(MaxTilt(1)).wait()
+if maxTiltAction.success():
+    print("MaxTilt(1) success")
+elif maxTiltAction.timedout():
+    print("MaxTilt(1) timedout")
+else:
+    # If ".wait()" is called on the _maxTiltAction_ this shouldn't happen
+    print("MaxTilt(1) is still in progress")
+drone.disconnection()
+```
+
+
+```
+MaxTilt(10) success
+MaxTilt(1) timeout
+```
+
+# Example 4 - Move the drone
+
+Write the following python script `moveby.py`.
+```python
+import olympe
+from olympe.messages.ardrone3.Piloting import TakeOff, moveBy, Landing
+
+drone = olympe.Drone("10.202.0.1")
+drone.connection()
+drone(TakeOff()).wait()
+drone(moveBy(10, 0 0, 0)).wait()
+drone(Landing()).wait()
+drone.disconnection()
+```
+
+Then execute by doing `python moveby.py`.
+
+Here you will see that the drone will takeoff but won't execute the moveBy command. (If it does not move at all try executing it again)
+
+When olympe sends a command message to the drone it expects an acknowledgement event message. Here `drone(TakeOff()).wait()` sends the `TakeOff()` command to the drone and then waits for the drone taking off event message. After TakeOff(), the flying state should be `FlyingStateChanged(state='takingoff')`. 
+
+The problem with the command `moveBy()` is that it only works if the drone is in "hovering" state. Thus, in this case it is rejected because the drone is still in "takingoff" state. Furthermore, to correct this script, we will need it to wait for the drone to be in "hovering" state.
