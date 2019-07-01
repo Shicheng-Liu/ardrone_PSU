@@ -126,4 +126,4 @@ __NOTE:__ For the initial run of each drone, it may take a while to start up.
 Once simulation has started up, you will see your drone sitting at the origin of the gazebo simulator.
 
 ## Next step...!
-Now move onto the src directory where you will launch the simulator and write a python script to control the drone there.
+Now move onto the [src directory](https://github.com/shulace13/parrot_PSU/tree/master/src) where you will launch the simulator and write a python script to control the drone there.

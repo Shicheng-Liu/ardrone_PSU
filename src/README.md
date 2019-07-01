@@ -5,6 +5,11 @@ We are referring from [this page](https://developer.parrot.com/docs/olympe/userg
 
 This readme will only show brief things. For futher info, go to the page above.
 
+## Side Notes
+__NOTE:__ I couldn't see any actual results (for example2) because there were so many log outputs. Trying to figure out how I could disable them. I did see the `print` line so the program did succesfully catch the state. 2019/06/20
+
+__NOTE:__ If you have problems such as, executing the script but not initially working and then it works the second time, or the program isn't waiting for the drone to be in a certain state, restart your computer. It might be the solution. 2019/07/01
+
 # Example 1 - Initial take off
 ## Write a Python script
 We will create a simple python script (Just like a "Hello, World" program).
@@ -25,7 +30,7 @@ Before executing the script, you will need to prepare your sphinx environment. F
 
 Execute the following commands.
 ```
-sudo systemctl start firmwared
+sudo systemctl start firmwared.service
 sphinx /opt/parrot-sphinx/usr/share/sphinx/drones/anafi4k.drone::stolen_interface=::simple_front_cam=true
 ```
 
@@ -74,7 +79,6 @@ Execute this script in the same shell environment you prepared in Example 1
 
 If all goes well, you should see the following results. 
 
-__NOTE:__ I couldn't see any because there were so many log outputs. Trying to figure out how I could disable them. I did see the `print` line so the program did succesfully catch the state. 2019/06/20
 
 
 Here, in the arsdk protocol defined in arsdk-xml does not provide a way to report errors. Thus, Olympe associates to each command a default timeout that can be overdriven with the *_timeout* message parameter.
@@ -116,6 +120,11 @@ else:
 drone.disconnection()
 ```
 
+The `MaxTilt()` command is from the `ardrone3` feature. The first one with a 10 degree tilt and the second wih a 1 degree tilt value.
+
+Here, we assigned the `maxTiltAction` variable the object returned by the `.wait()` method. for now, all you need to know is you can call `.success()` on an action object if you want to know whether your commad succeeded or not. This is a straight forward command, it returns `True` if the command was a success and `False` otherwise. You could also use `.timedout()`. However, this is typically not used because the we have a `.wait()` assigned to the action where we will be waiting for its success or being timed out.
+
+If all goes well, you should get the following.
 
 ```
 MaxTilt(10) success
