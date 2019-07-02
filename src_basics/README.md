@@ -7,6 +7,7 @@ This readme will only show brief things. For futher info, go to the page above.
 
 ## Side Notes
 ~~__NOTE:__ I couldn't see any actual results (for example2) because there were so many log outputs. Trying to figure out how I could disable them. I did see the `print` line so the program did succesfully catch the state. 2019/06/20~~
+
 __NOTE:__ UPDATE! Found out a way to put logs into a file instead of the terminal stdout. Do as follow. `olympe.Drone("10.202.0.1", logfile=open("/tmp/olympe.log", "a+"))` The file placement and name can be set to anyhting. 2019/07/02
 
 __NOTE:__ If you have problems such as, executing the script but not initially working and then it works the second time, or the program isn't waiting for the drone to be in a certain state, restart your computer. It might be the solution. 2019/07/01

@@ -2,7 +2,8 @@ import olympe
 from olympe.messages.ardrone3.Piloting import TakeOff, moveBy, Landing
 from olympe.messages.ardrone3.PilotingState import FlyingStateChanged
 
-drone = olympe.Drone("10.202.0.1")
+# drone = olympe.Drone("10.202.0.1")
+drone = olympe.Drone("10.202.0.1", logfile=open("/tmp/drone_moveby.log", "a+"))
 drone.connection()
 drone(
     TakeOff()
