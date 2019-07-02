@@ -2,7 +2,7 @@
 Documenting and some works for the parrot_PSU
 
 # System worked on
-* Ubuntu 16.04
+* Ubuntu 16.04 or 18.04
 * OpenGL 4.6.0 NVIDIA 390.87
 * Parrot-Sphinx 1.2.1
 * Parrot-Olympe 1.0.0
