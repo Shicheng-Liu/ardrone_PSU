@@ -43,3 +43,16 @@ class ardrone3.Piloting.TakeOff(ArsdkMessage)
 ```
 
 Now you should be able to write your own scripts. We will provide some advanced usages in this directory.
+
+## Logging policies
+You can control the way of logging by the following methods: Use `loglevel` parameter or `logfile` parameter withing the `olympe.Drone` action.
+
+`loglevel` will let you set a level (Criticla, warning, report, etc.) that you desire. For our examples, we will be using 2.
+
+`logfile` will let you create a log file at a place where you directed to. Here is an example `logfile=open("/tmp/drone.log", "a+")`.
+
+However, it is quite intersting to see what's going on.
+
+
+## Using Olympe asynchronously
+
