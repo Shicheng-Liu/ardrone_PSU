@@ -8,6 +8,8 @@ drone.connection()
 
 flying_states = FlyingState._bitfield_type_("takingoff|hovering|flying")
 
+print("Drone about to take off!")
+
 drone(
     TakeOff()
     >> FlyingStateChanged(state="hovering", _timeout=5)
@@ -18,5 +20,12 @@ if drone.get_state(FlyingStateChanged)["state"] in flying_states:
 else:
     print("The drone is not in flight")
 
+drone(
+    # Parameters are as follow (dx[m], dy[m], dz[m], dPsi[rad], timeout(default 20)) Two more but refer to README)
+    moveBy(5, 0, 0, 0)
+    >> FlyingStateChanged(state="hovering", _timeout=5)
+)
+
+print("Drone landing...")
 drone(Landing()).wait()
 drone.disconnection()
