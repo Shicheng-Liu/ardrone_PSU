@@ -22,9 +22,25 @@ else:
 
 drone(
     # Parameters are as follow (dx[m], dy[m], dz[m], dPsi[rad], timeout(default 20)) Two more but refer to README)
-    moveBy(5, 0, 0, 0)
+    moveBy(4, 2, 0, 1)
     >> FlyingStateChanged(state="hovering", _timeout=5)
-)
+).wait()
+
+print("Drone landing...")
+drone(Landing()).wait()
+
+print("Drone landed!")
+print("Drone taking off...")
+drone(
+    TakeOff()
+    >> FlyingStateChanged(state="hovering", _timeout=5)
+).wait()
+
+print("Drone moving...")
+drone(
+    moveBy(-4, -2, 0, 0)
+    >> FlyingStateChanged(state="hovering", _timeout=5)
+).wait()
 
 print("Drone landing...")
 drone(Landing()).wait()

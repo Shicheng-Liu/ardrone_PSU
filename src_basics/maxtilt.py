@@ -2,7 +2,8 @@ from __future__ import print_function
 import olympe
 from olympe.messages.ardrone3.PilotingSettings import MaxTilt
 
-drone = olympe.Drone("10.202.0.1")
+# drone = olympe.Drone("10.202.0.1")
+drone = olympe.Drone("10.202.0.1", loglevel=1)
 drone.connection()
 maxTiltAction = drone(MaxTilt(10)).wait()
 if maxTiltAction.success():
