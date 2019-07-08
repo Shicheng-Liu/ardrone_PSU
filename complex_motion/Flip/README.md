@@ -8,7 +8,7 @@ Refer [Here](https://developer.parrot.com/docs/olympe/arsdkng_ardrone3_animation
 <br>
 <br>
 **NOTE** : The _Flip_ function can only work on Bebop drone. The ANAFI does not know how to flip and will ignore this command.
-If you follow the instructions in this repository, your simulated drone is ANAFI which cannot flip.
+If you follow the previous instructions in this repository, your simulated drone is ANAFI which cannot flip.
 <br>
 <br>
 To address this problem, we need to simulate Bebop in your Gazebo. Follow this instruction:<br>
