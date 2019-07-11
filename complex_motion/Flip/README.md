@@ -15,7 +15,7 @@ To address this problem, we need to simulate Bebop in your Gazebo. Follow this i
 <br> Start the Simulation:
 <br> `$ sudo systemctl start firmwared`
 <br> `$ sphinx /opt/parrot-sphinx/usr/share/sphinx/drones/bebop2.drone::stolen_interface=::simple_front_cam=true`
-<br>**ATTENTION**: The commands are similar to the previous ones but they are different, so please copy this one.
+<br>**ATTENTION**: The commands are similar to the one you used to setup ANAFI simulation but they are actually different, so please copy this one.
 <br>
 <br>Setup your shell environment:
 <br>`source ~/code/parrot-groundsdk/./products/olympe/linux/env/shell`
@@ -25,3 +25,6 @@ To address this problem, we need to simulate Bebop in your Gazebo. Follow this i
 <br>
 <br>
 The details will be shown in python script.
+<br>
+<br>
+**NOTE**: The difference between Bebop simulation and ANAFI simulation is mentioned above, you can the same commands like TakeOff(), Landing(), and some else in both Bebop and ANAFI
