@@ -27,4 +27,4 @@ To address this problem, we need to simulate Bebop in your Gazebo. Follow this i
 The details will be shown in python script.
 <br>
 <br>
-**NOTE**: The difference between Bebop simulation and ANAFI simulation is mentioned above, you can the same commands like TakeOff(), Landing(), and some else in both Bebop and ANAFI
+**NOTE**: The difference between Bebop simulation and ANAFI simulation is mentioned above, you can use the same commands like TakeOff(), Landing(), and some else in both Bebop and ANAFI
