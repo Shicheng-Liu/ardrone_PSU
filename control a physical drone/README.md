@@ -26,4 +26,4 @@ That is because you do not source your _setup_ file in your workspace. Run the c
 <br>  **NOTE**: If your Ubuntu version is not 16.04, please use VirtualBox to work in Ubuntu 16.04 env(The steps are mentioned in the tutorial part1 and part2)
 That is because Ubuntu18 can only use ROS melodic which will generate annoying bugs if you follow this tutorial. ROS kinetic will give you satisfying results and can only be run 
 on Ubuntu16
-<br> If your ubuntu version is 14.04, you can also use ROS indigo which can also work. You can also use this tutorial, just changing _kinetic_ in your command into _indigo_. 
+<br> If your ubuntu version is 14.04, you can also use ROS indigo which can also work. You can still use this tutorial, just changing _kinetic_ in your command into _indigo_.  Remember, since indigo is too old and out of support, you may meet troubles when installing packages, Google search will help.
