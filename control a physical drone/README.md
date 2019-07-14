@@ -23,7 +23,7 @@ That is because you do not source your _setup_ file in your workspace. Run the c
 <br> And then you can run the command `roslaunch ardrone_tutorials keyboard_controller.launch` , everthing will be fine.(ros_workspace is the name of the environment you create to control your ardrone
 , which is same with the one in the tutorial. But if you use another name when creating your working environment, please change ros_workspace to your own name)
 <br>
-<br>  **NOTE**: If your Ubuntu version is not 16.04, please use VirtualBox to work in Ubuntu 16.04 env(The steps are mentioned in the tutorial part1 and part2)
+<br>  **NOTE**: If your Ubuntu version is 18.04, please use VirtualBox to work in Ubuntu 16.04 or 14.04env(The steps are mentioned in the tutorial part1 and part2)
 That is because Ubuntu18 can only use ROS melodic which will generate annoying bugs if you follow this tutorial. ROS kinetic will give you satisfying results and can only be run 
 on Ubuntu16
 <br> If your ubuntu version is 14.04, you can also use ROS indigo which can also work. The following works are based on ROS indigo. Since indigo is too old and out of support, you can only use source code to install. I will give every step of downloading ROS indigo and relevant packages.
