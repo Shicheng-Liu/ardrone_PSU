@@ -72,6 +72,9 @@ at the bottom. Use button _ESC_ and type in `:wq`, then _ENTER_.        FINISHED
 <br> `rosmake -a`
 <br> `sudo apt-get install python-pyside`
 <br>
+
+<br> Launch your package and make the drone fly
+---------------------------------------------------
 <br> Now, you have successfully installed all we need. The next step is to connect with your Ardrone and make it fly!
 <br> First, you need connect the WIFI of your drone.
 <br> Open a terminal, run `roscore`; Open a second terminal, run `cd ros_workspace` followed by `source devel/setup.bash` and then 
