@@ -36,7 +36,9 @@ Now you have all requirements setup, just turn on a terminal, Connect with your 
 <br> Then you can control simply, just choose the following commands:
 <br> `takeoff(), land(), front(), back(), left(), right(), clockwise(), counterClockwise(), up(), down()`
 <br> These commands show their meaning clearly, so I will not explain again.
+<br>
 <br> **NOTE**: Except the first two commands, the rest eight commands need speed parameter that ranges from 0 to 1. For example, if you want the drone to move forward, type in _front(0.05)_. The drone flies fast so make sure your parameter is small and 0.05 is enough. But if your space is large, you can increase it. Now, your drone is flying forward, _front(0)_ can make it stop. The other seven commands are the same.
+<br>
 <br> Also, if you want control it automatically, you can create a node script and run it. 
 <br> Here is a script, open your terminal, connect with the WIFI and type in `node first_try.js`. You will see the drone takeoff, move forward for a while, then backward, clockwise and land.
 <br> If you want to write your own script, you can refer _first_try.js_.
