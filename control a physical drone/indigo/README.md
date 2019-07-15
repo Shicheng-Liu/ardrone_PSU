@@ -17,7 +17,7 @@ the steps in the website [Here](https://fidel.ie/2017/01/16/getting-started-with
 <br> `xrandr --addmode Virtual1 "1920x1080_60.00"`
 <br> Then, go to the setting, find the _Display_ , you can see the choice 1920x1080, choose and apply.
 <br>
-<br> You still add two codes
+<br> You still need to add two codes
  to your /etc/profile
 <br> `sudo chmod 777 /etc/profile` 
 <br> `vim /etc/profile`
