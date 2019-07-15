@@ -2,7 +2,7 @@ How to use indigo to control ardrone2 (keyboard control)
 =====================================
 Here we go
 <br>
-<br> First, you need Ubuntu14 since indigo can only be used in Ubuntu14. 
+<br> First, you need Ubuntu14 since indigo can only be used on Ubuntu14. 
 <br> You can use [VirtualBox](https://www.virtualbox.org/wiki/Downloads) to start with your virtual [Ubuntu14](http://old-releases.ubuntu.com/releases/14.04.0/)
 <br> 
 <br> Once you have installed VirtualBox and downloaded image of Ubuntu14, open VirtualBox.
