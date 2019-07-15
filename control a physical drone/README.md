@@ -8,8 +8,7 @@ Now, the lab has only one series: Ardrone2.
 
 <br> Node.js
 ----------------------
-There is a great tutorial already conprehensively developed. Following the instructions, you can do a nice work. Refer [Here](https://github.com/felixge/node-ar-drone)
-<br> You can use node.js both on Windows and Linux.
+<br> _Node.js_ is an awesome tool, it can help you get started with Ardrone quikly and easily. Just click here and you will have fun soon.
 
 <br> ROS
 ------------
