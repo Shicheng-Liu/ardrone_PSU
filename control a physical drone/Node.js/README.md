@@ -40,3 +40,6 @@ Now you have all requirements setup, just turn on a terminal, Connect with your 
 <br> Also, if you want control it automatically, you can create a node script and run it. 
 <br> Here is a script, open your terminal, connect with the WIFI and type in `node first_try.js`. You will see the drone takeoff, move forward for a while, then backward, clockwise and land.
 <br> If you want to write your own script, you can refer _first_try.js_.
+<br>
+<br>
+<br> Reference: https://github.com/felixge/node-ar-drone
