@@ -1,10 +1,19 @@
-How to use indigo to control ardrone2
+How to use indigo to control ardrone2 (keyboard control)
 =====================================
 Here we go
 <br>
 <br> First, you need Ubuntu14 since indigo can only be used in Ubuntu14. 
-<br> You can use VirtualBox to start with your virtual Ubuntu14 and you can follow 
-the steps in the website [Here](https://fidel.ie/2017/01/16/getting-started-with-ardrone2.html)
+<br> You can use [VirtualBox](https://www.virtualbox.org/wiki/Downloads) to start with your virtual [Ubuntu14](http://old-releases.ubuntu.com/releases/14.04.0/)
+<br> 
+<br> Once you have installed VirtualBox and downloaded image of Ubuntu14, open VirtualBox.
+<br>  * Click on “New”
+<br>  * give your virtual machine a name such as “Ubuntu14”
+<br>  * 2GB of RAM is good, but if you are tight with RAM, 1GB is already enough for keyboard control.
+<br>  * Select a dynamically allocated disk of 25GB to give yourself room
+<br>  * Once created, click settings
+<br>  * Goto: Storage > Controller, IDE > ‘Choose Virtual Disk’ and select the Ubuntu .ISO you downloaded
+<br>  * Goto: Network options.   Make sure you have two connections: one is NAT and the other is bridged connection.
+<br>  * Goto: Display. allocate 32MB of video memory to your virtual Ubuntu14.
 <br>
 <br> PS: If you find the resolution cannot match  your computer, you can open your terminal and follow these steps:
 <br> `$ xrandr`
