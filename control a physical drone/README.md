@@ -12,15 +12,7 @@ Now, the lab has only one series: Ardrone2.
 
 <br> ROS
 ------------
-You can also use ROS to control your Ardrone2, which seems to be cooler. Refer [Here](https://fidel.ie/2017/01/18/getting-started-with-ardrone2-part3.html)
-<br> The tutorial has three parts.
-<br>
-<br> **ATTENTION**: There is an imperfection in this tutorial: After following all the steps, you will meet an error after you run the command `roslaunch ardrone_tutorials keyboard_controller.launch` in your second terminal.
-That is because you do not source your _setup_ file in your workspace. Run the code below first in your second terminal:
-<br> `cd ros_workspace`
-<br> `source devel/setup.bash`
-<br> And then you can run the command `roslaunch ardrone_tutorials keyboard_controller.launch` , everthing will be fine.(ros_workspace is the name of the environment you create to control your ardrone
-, which is same with the one in the tutorial. But if you use another name when creating your working environment, please change ros_workspace to your own name)
+You can also use ROS to control your Ardrone2, which seems to be cooler. 
 <br>
 <br>  **NOTE**: If your Ubuntu version is 18.04, please use VirtualBox to work in Ubuntu 16.04 or 14.04env(The steps are mentioned in the tutorial part1 and part2)
 That is because Ubuntu18 can only use ROS melodic which will generate annoying bugs if you follow this tutorial. ROS kinetic will give you satisfying results and can only be run 
