@@ -8,7 +8,7 @@ Now, the lab has only one series: Ardrone2.
 
 <br> Node.js
 ----------------------
-<br> _Node.js_ is an awesome tool, it can help you get started with Ardrone quikly and easily. Just click here and you will have fun soon.
+<br> _Node.js_ is an awesome tool, it can help you get started with Ardrone quikly and easily. Just click [here](https://github.com/Shicheng-Liu/parrot_PSU/tree/master/control%20a%20physical%20drone/Node.js) and you will have fun soon.
 
 <br> ROS
 ------------
