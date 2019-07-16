@@ -7,7 +7,8 @@ We can use the function _Circle()_ to make the drone circle. Refer <a href="http
 <br>`sudo systemctl start firmwared`
 <br>`sphinx /opt/parrot-sphinx/usr/share/sphinx/drones/disco.drone::stolen_interface=::simple_front_cam=true`
 <br>
-<br> Start the Olympe env:
+<br> Start the Olympe environment:
 <br>`source ~/code/parrot-groundsdk/./products/olympe/linux/env/shell`
-<br>
-<br>
+<br> Install a jsonrpc client library in your environment:
+<br> `pip3 install jsonrpclib-pelix`
+<br> You also need to use the jsonrpclib module to trigger the “fixedwings_shake/handling” action, which I will show in detail in python script.
