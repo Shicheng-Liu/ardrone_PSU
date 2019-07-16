@@ -46,4 +46,4 @@ Y – Takeoff                                         <br> H – Land
 <br>
 SPACEBAR – EMERGENCY STOP
 <br>
-<br> **ATTENTION**: You may find the command keys are different from those in the README, that is because if you use my _ros_workspace_, the code related to key command has been changed, which I think will be easiler to control. However, if you build the workspace yourself, you are using original package from the website so the key is different.
+<br> **ATTENTION**: You may find the command keys are different from those in the README, that is because if you use my _ros_workspace_, the code related to key command has been changed, which I think will be easiler to control. However, if you build the workspace yourself, you are using original package from the website so the keys are different.
