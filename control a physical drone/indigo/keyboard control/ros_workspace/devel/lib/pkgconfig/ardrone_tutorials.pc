@@ -1,0 +1,8 @@
+prefix=/home/server/ros_workspace/devel
+
+Name: ardrone_tutorials
+Description: Description of ardrone_tutorials
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/server/ros_workspace/devel/lib 
+Requires: 
