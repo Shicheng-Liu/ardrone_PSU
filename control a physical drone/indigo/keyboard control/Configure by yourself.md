@@ -35,14 +35,15 @@ Create your workspace
 <br> You will see a video popup showing the videostream from the front camera of your drone.
 <br> Now Press your keys and make if fly!
 <br> 
-W – Pitch Forward     <br>S – Pitch Backward            
-A – Roll Left                                        <br>D – Roll Right
+E – Pitch Forward     <br>D – Pitch Backward            
+S – Roll Left                                        <br>F – Roll Right
 <br>
-Q – Yaw Left                                        <br> R – Yaw Right
+W – Yaw Left                                        <br> R – Yaw Right
 <br>
-Z – Increase Altitude                                <br>C – Decrease Altitude
+Q – Increase Altitude                                <br>A – Decrease Altitude
 <br>
 Y – Takeoff                                         <br> H – Land
 <br>
 SPACEBAR – EMERGENCY STOP
 <br>
+<br> **ATTENTION**: You may find the command keys are different from those in the README, that is because if you use my _ros_workspace_, the code related to key command has been changed, which I think will be easiler to control. However, if you build the workspace yourself, you are using original package from the website so the key is different.
