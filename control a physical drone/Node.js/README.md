@@ -10,7 +10,7 @@ You may have installed Node.js and npm already, then you can see the version of 
 <br> `npm -v`
 <br> If your Node.js and npm work well, please move to the next part in this readme **Make it fly**
 <br> **But**  if you only have node, I recommend you to uninstall your node and install the latest version of Node.js and npm, or you may meet trouble while installing npm.
-First step, unistall your Node.js(If you do not have Node installed on your computer, just skip this step)
+<br> **First step**, unistall your Node.js(If you do not have Node installed on your computer, just skip this step)
 <br>`sudo apt-get remove --purge npm`
 <br> `sudo apt-get remove --purge nodejs`
 <br>`sudo apt-get remove --purge nodejs-legacy`
@@ -20,7 +20,7 @@ First step, unistall your Node.js(If you do not have Node installed on your comp
 <br> `rm -r /usr/local/lib/node-moudels`
 <br> ` find / -name npm`
 <br> `rm -r /tmp/npm*`
-<br> Second step, install the latest version of Node.js and npm:
+<br> **Second step**, install the latest version of Node.js and npm:
 <br> `curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -` 
 <br> If you do not have curl, please install.
 <br> `sudo apt-get install nodejs`
