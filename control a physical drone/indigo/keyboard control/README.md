@@ -60,7 +60,7 @@ at the bottom. Use button _ESC_ and type in `:wq`, then _ENTER_.        FINISHED
 <br> Relevant packages installation
 -------------------------------------
 <br> You can download the folder _ros_workspace_ in your home directory. Then you can go to the next step **Launch your package and make the drone fly**
-<br> But, if you want create the workspace yourself, you can also choose not to download the folder _ros_workspace_ and [configure it yourself](https://github.com/Shicheng-Liu/parrot_PSU/blob/master/control%20a%20physical%20drone/indigo/keyboard%20control/Configure%20by%20yourself.md) Then you can go to the next step **Launch your package and make the drone fly**
+<br> But, if you want create the workspace yourself, you can also choose not to download the folder _ros_workspace_ and [configure it yourself](https://github.com/Shicheng-Liu/parrot_PSU/blob/master/control%20a%20physical%20drone/indigo/keyboard%20control/Configure%20by%20yourself.md) 
 <br>
 
 <br> Launch your package and make the drone fly
