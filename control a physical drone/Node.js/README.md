@@ -1,6 +1,7 @@
 Use Node.js to control Ardrone2
 ==================================
 You need to downlaod the folder _ardrone_module_ and the files _repl.js_ and _first_try.js_ in your home directory. Then, install _Node.js_ and _npm_ and everything will work.
+<br> **NOTE**: You may have cloned all this repository before, once you have downloaded the whole repository, please copy the folder _ardrone_module_ and the files _repl.js_ and _first_try.js_, and paste in your home directory. **THE MOST IMPORTANT**: change the name of foldler _ardrone_module_ to _node_modules_, otherwise it cannot work.
 <br> Node.js can work on both Linux and Windows, and now we run on Ubuntu.
 
 Node.js and npm installation
