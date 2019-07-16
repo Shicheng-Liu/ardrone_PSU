@@ -20,4 +20,4 @@ That is because Ubuntu18 can only use ROS melodic which will generate annoying b
 on Ubuntu16
 <br> If your ubuntu version is 14.04, you can also use ROS indigo which can also work. The following works are based on ROS indigo. Since indigo is too old and out of support, you can only use source code to install. I will give every step of downloading ROS indigo and relevant packages.
 <br>
-<br> Now click [here](https://github.com/Shicheng-Liu/parrot_PSU/blob/master/control%20a%20physical%20drone/indigo/README.md) to go on 
+<br> Now click [here](https://github.com/Shicheng-Liu/parrot_PSU/tree/master/control%20a%20physical%20drone/indigo) to go on 
