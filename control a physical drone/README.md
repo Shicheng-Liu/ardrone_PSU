@@ -16,6 +16,7 @@ You can also use ROS to control your Ardrone2, which seems to be cooler.
 <br>
 <br>  **NOTE**: If your Ubuntu version is 18.04, please use VirtualBox to work in Ubuntu 16.04 or 14.04 environment(The steps will be mentioned)
 That is because Ubuntu18 can only use ROS melodic which will generate annoying bugs. 
-<br> ROS kinetic will give you satisfying results and can only be run on Ubuntu16, I personally recommend you to use ROS kinetic, click [here]()
-<br> If your ubuntu version is 14.04, you can also use ROS indigo which can also work. However, since indigo is too old and out of support, you can only use source code to install and may miss some funtions. click [here](https://github.com/Shicheng-Liu/parrot_PSU/tree/master/control%20a%20physical%20drone/indigo) 
-<br> Repeat, I personally recommend you to use ROS kinetic since some projects here can only work successfully on kinetic.
+<br> **ROS kinetic** will give you satisfying results and can only be run on Ubuntu16, I personally recommend you to use ROS kinetic, click [here](https://github.com/Shicheng-Liu/parrot_PSU/tree/master/control%20a%20physical%20drone/kinetic)
+<br> **ROS indigo** If your ubuntu version is 14.04, you can also use ROS indigo which can also work. However, since indigo is too old and out of support, you can only use source code to install and may miss some funtions. click [here](https://github.com/Shicheng-Liu/parrot_PSU/tree/master/control%20a%20physical%20drone/indigo) 
+<br>
+<br> Repeat, I personally recommend you to use ROS kinetic since some projects here can only work successfully on kinetic. If you choose kinetic, you can throw the folder _indigo_ away, because all the projects in _indigo_ will also be provided in _kinetic_ in a kinetic version.
