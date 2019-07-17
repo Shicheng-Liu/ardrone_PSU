@@ -44,6 +44,7 @@ at the bottom. Use button _ESC_ and type in `:wq`, then _ENTER_.        FINISHED
 <br> Then install all the dependancies for ROS and ROS itself:
 <br>`sudo apt-get install ros-kinetic-desktop-full`
 <br>
+
 <br> Relevant packages installation
 ---
 <br> You can download the folder _ros_workspace_ in your home directory. Then you can go to the next step **Launch your package and make the drone fly**
