@@ -1,6 +1,6 @@
 ROS indigo to control
 ====================================
-Here, we can use ROS to do lots of fancy stuff.
+Here, we can use ROS indigo to control your ardrone.
 <br> 
 I will put several projects in sequence. Please, follow the order.
 <br>
