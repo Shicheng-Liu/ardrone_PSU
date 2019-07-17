@@ -47,6 +47,16 @@ at the bottom. Use button _ESC_ and type in `:wq`, then _ENTER_.        FINISHED
 
 <br> Relevant packages installation
 ---
+<br> Right so while still having the terminal open type the following (to get these installed):
+<br> `sudo apt-get install ros-kinetic-ardrone-autonomy ros-kinetic-joystick-drivers python-rosinstall`
+<br> `sudo apt-get install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libpulse-dev libxt-dev openssh-server`
+<br> Initialize rosdep
+<br> `sudo rosdep init`
+<br> `rosdep update`
+<br> `echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc`
+<br> `source ~/.bashrc`
+<br> `sudo apt-get update`
+<br> `reboot`
 <br> You can download the folder _ros_workspace_ in your home directory. Then you can go to the next step **Launch your package and make the drone fly**
 <br> But, if you want create the workspace yourself, you can also choose not to download the folder _ros_workspace_ and [configure it yourself](https://github.com/Shicheng-Liu/parrot_PSU/blob/master/control%20a%20physical%20drone/kinetic/keyboard%20control/Configure%20by%20yourself.md) 
 <br>
