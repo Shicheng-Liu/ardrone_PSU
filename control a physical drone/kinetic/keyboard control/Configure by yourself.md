@@ -3,28 +3,42 @@ Create your workspace
 
 <br> Relevant packages installation
 -------------------------------------
-<br> We need to use keyboard to control the motion of the drone, so now we need two packages: _ardrone_autonomy_ and _ardrone_tutorials_
-<br> Here, we will install these two packages into your workspace just built, _ros_workspace_
-<br> `cd ros_workspace/src`
-<br> `sudo apt-get install ros-indigo-joystick-drivers python-rosinstall`
+<br> Relevant packages installation
+---
+<br> You can download the folder _ros_workspace_ in your home directory. Then you can go to the next step **Launch your package and make the drone fly**
+<br> Right so while still having the terminal open type the following (to get these installed):
+<br> `sudo apt-get install ros-kinetic-ardrone-autonomy ros-kinetic-joystick-drivers python-rosinstall`
 <br> `sudo apt-get install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libpulse-dev libxt-dev openssh-server`
-<br> `cd ros_workspace/src`
+<br> Initialize rosdep
+<br> `sudo rosdep init`
+<br> `rosdep update`
+<br> `echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc`
+<br> `source ~/.bashrc`
+<br> `sudo apt-get update`
+<br> `reboot`
+<br>
+<br>
+
+Create your workspace
+---
+<br> **server is my username, if yours is different, please change it to yours**
+<br> `mkdir /home/server/ros_workspace/src/`
+<br> `cd /home/server/ros_workspace/src/`
 <br> `catkin_init_workspace`
-<br> `cd ..`
+<br> `cd /home/server/ros_workspace/`
 <br> `catkin_make`
 <br> `source /home/server/ros_workspace/devel/setup.bash`
-<br> `echo "source /home/server/ros_workspace/setup.bash" >> ~/.bashrc`
-<br> **NOTE**: The username is _server_, if yours is not, please change it.
-<br> `cd /home/server/ros_workspace/src/`
-<br> `git clone https://github.com/AutonomyLab/ardrone_autonomy.git`
+<br> Configure ardrone_tutorials package
+<br>`cd /home/server/ros_workspace/src/`
 <br> `git clone https://github.com/mikehamer/ardrone_tutorials.git`
 <br> `ls -la`
 <br> `cd /home/server/ros_workspace/`
-<br> `rosdep install --from-paths src -i`
 <br> `catkin_make`
 <br> `rosmake -a`
 <br> `sudo apt-get install python-pyside`
 <br>
+<br>
+Reference:https://fidel.ie//2017/01/16/getting-started-with-ardrone2.html
 
 <br> Launch your package and make the drone fly
 ---------------------------------------------------
