@@ -1,4 +1,4 @@
-ROS to control
+ROS indigo to control
 ====================================
 Here, we can use ROS to do lots of fancy stuff.
 <br> 
