@@ -1,8 +1,7 @@
 Create your workspace
 =====================================
 
-<br> Relevant packages installation
--------------------------------------
+
 <br> Relevant packages installation
 ---
 <br> You can download the folder _ros_workspace_ in your home directory. Then you can go to the next step **Launch your package and make the drone fly**
