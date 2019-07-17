@@ -1,25 +1,6 @@
 Create your workspace
 =====================================
 
-
-<br> Relevant packages installation
----
-<br> You can download the folder _ros_workspace_ in your home directory. Then you can go to the next step **Launch your package and make the drone fly**
-<br> Right so while still having the terminal open type the following (to get these installed):
-<br> `sudo apt-get install ros-kinetic-ardrone-autonomy ros-kinetic-joystick-drivers python-rosinstall`
-<br> `sudo apt-get install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libpulse-dev libxt-dev openssh-server`
-<br> Initialize rosdep
-<br> `sudo rosdep init`
-<br> `rosdep update`
-<br> `echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc`
-<br> `source ~/.bashrc`
-<br> `sudo apt-get update`
-<br> `reboot`
-<br>
-<br>
-
-Create your workspace
----
 <br> **server is my username, if yours is different, please change it to yours**
 <br> `mkdir /home/server/ros_workspace/src/`
 <br> `cd /home/server/ros_workspace/src/`
