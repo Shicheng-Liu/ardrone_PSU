@@ -9,7 +9,7 @@ How to make the ardrone2 recognize the environment and autopilot
 How to work on this project
 --
 <br> First, download the workspace _catkin_ws_ in your home directory. Since the core package _tum_ardrone_ we need to use in this project
- only has indigo version and is hard to install in kinetic, I will not give you the steps of installing the package. You just 
+ does not have kinetic version and is hard to install in kinetic, I will not give you the steps of installing the package. You just 
   download my worksapce _catkin_ws_ and everything will be fine.
   <br> Connect with the WIFI of your ardrone
  <br> Then you should open a terminal: `roscore`
