@@ -59,8 +59,27 @@ at the bottom. Use button _ESC_ and type in `:wq`, then _ENTER_.        FINISHED
 
 <br> Relevant packages installation
 -------------------------------------
-<br> You can download the folder _ros_workspace_ in your home directory. Then you can go to the next step **Launch your package and make the drone fly**
-<br> But, if you want create the workspace yourself, you can also choose not to download the folder _ros_workspace_ and [configure it yourself](https://github.com/Shicheng-Liu/parrot_PSU/blob/master/control%20a%20physical%20drone/indigo/keyboard%20control/Configure%20by%20yourself.md) 
+<br> We need to use keyboard to control the motion of the drone, so now we need two packages: _ardrone_autonomy_ and _ardrone_tutorials_
+<br> Here, we will install these two packages into your workspace just built, _ros_workspace_
+<br> `cd ros_workspace/src`
+<br> `sudo apt-get install ros-indigo-joystick-drivers python-rosinstall`
+<br> `sudo apt-get install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libpulse-dev libxt-dev openssh-server`
+<br> `cd ros_workspace/src`
+<br> `catkin_init_workspace`
+<br> `cd ..`
+<br> `catkin_make`
+<br> `source /home/server/ros_workspace/devel/setup.bash`
+<br> `echo "source /home/server/ros_workspace/setup.bash" >> ~/.bashrc`
+<br> **NOTE**: The username is _server_, if yours is not, please change it.
+<br> `cd /home/server/ros_workspace/src/`
+<br> `git clone https://github.com/AutonomyLab/ardrone_autonomy.git`
+<br> `git clone https://github.com/mikehamer/ardrone_tutorials.git`
+<br> `ls -la`
+<br> `cd /home/server/ros_workspace/`
+<br> `rosdep install --from-paths src -i`
+<br> `catkin_make`
+<br> `rosmake -a`
+<br> `sudo apt-get install python-pyside`
 <br>
 
 <br> Launch your package and make the drone fly
@@ -72,14 +91,16 @@ at the bottom. Use button _ESC_ and type in `:wq`, then _ENTER_.        FINISHED
 <br> You will see a video popup showing the videostream from the front camera of your drone.
 <br> Now Press your keys and make if fly!
 <br> 
-W – Pitch Forward     <br>S – Pitch Backward            
-A – Roll Left                                        <br>D – Roll Right
+E – Pitch Forward     <br>D – Pitch Backward            
+S – Roll Left                                        <br>F – Roll Right
 <br>
-Q – Yaw Left                                        <br> R – Yaw Right
+W – Yaw Left                                        <br> R – Yaw Right
 <br>
-Z – Increase Altitude                                <br>C – Decrease Altitude
+Q – Increase Altitude                                <br>A – Decrease Altitude
 <br>
 Y – Takeoff                                         <br> H – Land
 <br>
 SPACEBAR – EMERGENCY STOP
 <br>
+
+
