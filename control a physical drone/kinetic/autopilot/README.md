@@ -6,12 +6,25 @@ How to make the ardrone2 recognize the environment and autopilot
 <br>
 <br>
 
-How to work on this project
+Setup your workspace
 --
-<br> First, download the workspace _catkin_ws_ in your home directory. Since the core package _tum_ardrone_ we need to use in this project
- does not have kinetic version and is hard to install in kinetic, I will not give you the steps of installing the package. You just 
-  download my worksapce _catkin_ws_ and everything will be fine.
-  <br> Connect with the WIFI of your ardrone
+<br> First, you need to create a workspace _catkin_ws_ in your home directory or you can still use the workspace _ros_workspace_ we have already created in keyboard_control. 
+<br> Then go to the _src_ directory, Take _ros_workspace_ as an example:
+<br> `cd ros_workspace/src`
+<br> `git clone https://github.com/tum-vision/tum_ardrone.git`
+<br> `cd ..`
+<br> `rosdep install tum_ardrone`
+<br> Now, we need to edit a file to make tum_ardrone compatible with Ubuntu16:
+<br> Search the file _RosThread.h_ in your computer, and then you need to add two lines: `#ifndef Q_MOC_RUN`, `#endif`
+<br> The first one needs to be added at the top and the second one needs to be added at the bottom.
+<br> Then, you can `catkin_make`
+<be> Now, everything is done.
+ <br>
+ <br>
+ 
+ Work on your Ardrone2 now
+ ------
+<br> Connect with the WIFI of your ardrone
  <br> Then you should open a terminal: `roscore`
  <br> Open another terminal:
  <br> `cd catkin_ws`
