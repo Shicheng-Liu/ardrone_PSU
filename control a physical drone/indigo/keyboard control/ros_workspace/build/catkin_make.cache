@@ -1,2 +1,0 @@
-ardrone_autonomy:ardrone_tutorials
--DCATKIN_DEVEL_PREFIX=/home/server/ros_workspace/devel -DCMAKE_INSTALL_PREFIX=/home/server/ros_workspace/install -G Unix Makefiles
