@@ -91,12 +91,12 @@ Reference:https://fidel.ie//2017/01/16/getting-started-with-ardrone2.html
 <br> You will see a video popup showing the videostream from the front camera of your drone.
 <br> Now Press your keys and make if fly!
 <br> 
-W – Pitch Forward     <br>S – Pitch Backward            
-A – Roll Left                                        <br>D – Roll Right
+E – Pitch Forward     <br>D – Pitch Backward            
+S – Roll Left                                        <br>F – Roll Right
 <br>
-Q – Yaw Left                                        <br> R – Yaw Right
+W – Yaw Left                                        <br> R – Yaw Right
 <br>
-Z – Increase Altitude                                <br>C – Decrease Altitude
+Q – Increase Altitude                                <br>A – Decrease Altitude
 <br>
 Y – Takeoff                                         <br> H – Land
 <br>
