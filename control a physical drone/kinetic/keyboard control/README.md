@@ -57,9 +57,30 @@ at the bottom. Use button _ESC_ and type in `:wq`, then _ENTER_.        FINISHED
 <br> `source ~/.bashrc`
 <br> `sudo apt-get update`
 <br> `reboot`
-<br> If you download the folder _ros_workspace_ in your home directory. Then you can go to the next step **Launch your package and make the drone fly**
-<br> But, if you want to create the workspace yourself, you can also choose not to download the folder _ros_workspace_ and [configure it yourself](https://github.com/Shicheng-Liu/parrot_PSU/blob/master/control%20a%20physical%20drone/kinetic/keyboard%20control/Configure%20by%20yourself.md) 
 <br>
+<br>
+
+Create your workspace
+====
+<br> **server is my username, if yours is different, please change it to yours**
+<br> `mkdir /home/server/ros_workspace/src/`
+<br> `cd /home/server/ros_workspace/src/`
+<br> `catkin_init_workspace`
+<br> `cd /home/server/ros_workspace/`
+<br> `catkin_make`
+<br> `source /home/server/ros_workspace/devel/setup.bash`
+<br> Configure ardrone_tutorials package
+<br>`cd /home/server/ros_workspace/src/`
+<br> `git clone https://github.com/mikehamer/ardrone_tutorials.git`
+<br> `ls -la`
+<br> `cd /home/server/ros_workspace/`
+<br> `catkin_make`
+<br> `rosmake -a`
+<br> `sudo apt-get install python-pyside`
+<br>
+<br>
+Reference:https://fidel.ie//2017/01/16/getting-started-with-ardrone2.html
+
 
 <br> Launch your package and make the drone fly
 ---------------------------------------------------
