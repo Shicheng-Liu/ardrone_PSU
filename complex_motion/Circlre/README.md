@@ -12,8 +12,7 @@ We can use the function _Circle()_ to make the drone circle. Refer <a href="http
 <br>Then, install a jsonrpc client library in your python environment :
 <br> `(olympe-python3) $ pip3 install jsonrpclib-pelix`
 <br> From your script, use the jsonrpclib module to trigger the “fixedwings_shake/handling” action :
-<br> ```import jsonrpclib   
-
+ <br>       import jsonrpclib  
 <br>    import olympe
 <br>    import olympe_deps as od
 <br>    from olympe.messages.ardrone3.Piloting import TakeOff
