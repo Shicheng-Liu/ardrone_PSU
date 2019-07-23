@@ -17,19 +17,19 @@ cd ..
 rosdep install tum_ardrone
 ```
  Now, we need to edit a file to make tum_ardrone compatible with Ubuntu16:
-<br> Search the file _RosThread.h_ in your computer, and then you need to add two lines: `#ifndef Q_MOC_RUN`, `#endif`
+<br> Search the file `RosThread.h` in your computer, and then you need to add two lines: `#ifndef Q_MOC_RUN`, `#endif`
 <br> It will look like this after you have added these two lines:
 ```
-#ifndef Q_MOC_RUN<br>
-#include "cvd/thread.h"<br>
-#include "tum_ardrone/filter_state.h"<br>
-#include "std_msgs/String.h"<br>
-#include "geometry_msgs/Twist.h"<br>
-#include "ardrone_autonomy/Navdata.h"<br>
-#include "ros/ros.h"<br>
-#include "sensor_msgs/Joy.h"<br>
-#include "std_srvs/Empty.h"<br>
-#include "std_msgs/Empty.h"<br>
+#ifndef Q_MOC_RUN
+#include "cvd/thread.h"
+#include "tum_ardrone/filter_state.h
+#include "std_msgs/String.h"
+#include "geometry_msgs/Twist.h"
+#include "ardrone_autonomy/Navdata.h"
+#include "ros/ros.h"
+#include "sensor_msgs/Joy.h"
+#include "std_srvs/Empty.h"
+#include "std_msgs/Empty.h"
 #endif
 ```
 Then, you can `catkin_make`
