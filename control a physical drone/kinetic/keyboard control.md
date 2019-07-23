@@ -16,68 +16,85 @@ Here we go
 <br>  * Goto: Display. allocate 32MB of video memory to your virtual Ubuntu16.
 <br>
 <br> PS: If you find the resolution cannot match  your computer, you can open your terminal and follow these steps:
-<br> `$ xrandr`
+```
+$ xrandr
+```
 <br> Then you will see a list of resolutions to choose. Choose the one that matches your computer.
-<br> `$ xrandr -s yourchoice`
-<br>
-<br> If you cannot find the resolution you want, please follow these steps: (Take 1920x1080 as an example)
-<br> `cvt 1920 1080`
-<br> `xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync`
-<br> `xrandr --addmode Virtual1 "1920x1080_60.00"`
-<br> Then, go to the setting, find the _Display_ , you can see the choice 1920x1080, choose and apply.
+```
+$ xrandr -s yourchoice
+```
+ If you cannot find the resolution you want, please follow these steps: (Take 1920x1080 as an example)
+```
+cvt 1920 1080
+xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
+xrandr --addmode Virtual1 "1920x1080_60.00"
+```
+Then, go to the setting, find the `Display` , you can see the choice 1920x1080, choose and apply.
 <br>
 <br> You still need to add two codes
  to your /etc/profile
-<br> `sudo chmod 777 /etc/profile` 
-<br> `vim /etc/profile`
-<br> Then, add `xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync` and `xrandr --addmode Virtual1 "1920x1080_60.00"`
+ ```
+sudo chmod 777 /etc/profile
+vim /etc/profile
+```
+Then, add `xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync` and `xrandr --addmode Virtual1 "1920x1080_60.00"`
 at the bottom. Use button _ESC_ and type in `:wq`, then _ENTER_.        FINISHED!
 <br>
 
 <br> ROS kinetic installation
 ------------------------------
 <br> Open a terminal and setup ROS resources:
-<br>`sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'`
-<br> `sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116`
+```
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+```
 <br> Then update everything:
-<br>`sudo apt-get update`
-<br> Then install all the dependancies for ROS and ROS itself:
-<br>`sudo apt-get install ros-kinetic-desktop-full`
-<br>
+```
+sudo apt-get update
+```
+Then install all the dependancies for ROS and ROS itself:
+```
+sudo apt-get install ros-kinetic-desktop-full
+```
 
 <br> Relevant packages installation
 ---
 <br> Right so while still having the terminal open type the following (to get these installed):
-<br> `sudo apt-get install ros-kinetic-ardrone-autonomy ros-kinetic-joystick-drivers python-rosinstall`
-<br> `sudo apt-get install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libpulse-dev libxt-dev openssh-server`
-<br> Initialize rosdep
-<br> `sudo rosdep init`
-<br> `rosdep update`
-<br> `echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc`
-<br> `source ~/.bashrc`
-<br> `sudo apt-get update`
-<br> `reboot`
-<br>
+```
+sudo apt-get install ros-kinetic-ardrone-autonomy ros-kinetic-joystick-drivers python-rosinstall
+sudo apt-get install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libpulse-dev libxt-dev openssh-server
+```
+Initialize rosdep
+```sudo rosdep init
+rosdep update
+echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+sudo apt-get update
+reboot
+```
 <br>
 
 Create your workspace
 ====
 <br> **server is my username, if yours is different, please change it to yours**
-<br> `mkdir /home/server/ros_workspace/src/`
-<br> `cd /home/server/ros_workspace/src/`
-<br> `catkin_init_workspace`
-<br> `cd /home/server/ros_workspace/`
-<br> `catkin_make`
-<br> `source /home/server/ros_workspace/devel/setup.bash`
-<br> Configure ardrone_tutorials package
-<br>`cd /home/server/ros_workspace/src/`
-<br> `git clone https://github.com/mikehamer/ardrone_tutorials.git`
-<br> `ls -la`
-<br> `cd /home/server/ros_workspace/`
-<br> `catkin_make`
-<br> `rosmake -a`
-<br> `sudo apt-get install python-pyside`
-<br>
+```
+mkdir /home/server/ros_workspace/src/
+cd /home/server/ros_workspace/src/
+catkin_init_workspace
+cd /home/server/ros_workspace/
+catkin_make
+source /home/server/ros_workspace/devel/setup.bash
+```
+Configure ardrone_tutorials package
+```
+cd /home/server/ros_workspace/src/
+git clone https://github.com/mikehamer/ardrone_tutorials.git
+ls -la
+cd /home/server/ros_workspace/
+catkin_make
+rosmake -a
+sudo apt-get install python-pyside
+```
 <br>
 Reference:https://fidel.ie//2017/01/16/getting-started-with-ardrone2.html
 
