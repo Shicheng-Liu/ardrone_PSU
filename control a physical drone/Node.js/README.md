@@ -7,36 +7,52 @@ You need to downlaod the folder _ardrone_module_ and the files _repl.js_ and _fi
 Node.js and npm installation
 ----------
 You may have installed Node.js and npm already, then you can see the version of them.
-<br> `node -v`
-<br> `npm -v`
-<br> If your Node.js and npm work well, please move to the next part in this readme **Make it fly**
+```
+node -v
+npm -v
+```
+ If your Node.js and npm work well, please move to the next part in this readme **Make it fly**
 <br> **But**  if you only have node, I recommend you to uninstall your node and install the latest version of Node.js and npm, or you may meet trouble while installing npm.
 <br> **First step**, unistall your Node.js(If you do not have Node installed on your computer, just skip this step)
-<br>`sudo apt-get remove --purge npm`
-<br> `sudo apt-get remove --purge nodejs`
-<br>`sudo apt-get remove --purge nodejs-legacy`
-<br> `sudo apt-get autoremove`
-<br> You also need to delete several packages:
-<br> `rm -r /usr/local/bin/npm`
-<br> `rm -r /usr/local/lib/node-moudels`
-<br> ` find / -name npm`
-<br> `rm -r /tmp/npm*`
-<br> **Second step**, install the latest version of Node.js and npm:
-<br> `curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -` 
-<br> If you do not have curl, please install.
-<br> `sudo apt-get install nodejs`
-<br> Now, you have successfully installed, to see the version:
-<br> `node -v`
-<br> `npm -v`
+```
+sudo apt-get remove --purge npm
+sudo apt-get remove --purge nodejs
+sudo apt-get remove --purge nodejs-legacy
+sudo apt-get autoremove
+```
+You also need to delete several packages:
+```
+rm -r /usr/local/bin/npm
+rm -r /usr/local/lib/node-moudels
+find / -name npm
+rm -r /tmp/npm*
+```
+ **Second step**, install the latest version of Node.js and npm:
+ ```
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+```
+ If you do not have `curl`, please install. After you have installed `curl`, you can run the code below:
+```
+sudo apt-get install nodejs
+```
+Now, you have successfully installed, to see the version:
+```
+node -v
+npm -v
+```
 <br>
 
 Make it fly
 --
 Now you have all requirements setup, just turn on a terminal, Connect with your ardrone's WIFI
-<br> `node repl.js`
-<br> Then you can control simply, just choose the following commands:
-<br> `takeoff(), land(), front(), back(), left(), right(), clockwise(), counterClockwise(), up(), down()`
-<br> These commands show their meaning clearly, so I will not explain again.
+```
+node repl.js
+```
+Then you can control simply, just choose the following commands:
+```
+takeoff(), land(), front(), back(), left(), right(), clockwise(), counterClockwise(), up(), down()
+```
+These commands show their meaning clearly, so I will not explain again.
 <br>
 <br> **NOTE**: Except the first two commands, the rest eight commands need speed parameter that ranges from 0 to 1. For example, if you want the drone to move forward, type in _front(0.05)_. The drone flies fast so make sure your parameter is small and 0.05 is enough. But if your space is large, you can increase it. Now, your drone is flying forward, _front(0)_ can make it stop. The other seven commands are the same.
 <br>
