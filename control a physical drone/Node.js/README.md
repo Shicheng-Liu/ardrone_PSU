@@ -58,7 +58,7 @@ These commands show their meaning clearly, so I will not explain again.
 <br>
 <br> Also, if you want control it automatically, you can create a node script and run it. 
 <br> Here is a script, open your terminal, connect with the WIFI and type in `node first_try.js`. You will see the drone takeoff, move forward for a while, then backward, clockwise and land.
-<br> If you want to write your own script, you can refer _first_try.js_.
+<br> If you want to write your own script, you can refer [first_try.js](https://github.com/Shicheng-Liu/parrot_PSU/blob/master/control%20a%20physical%20drone/Node.js/first_try.js).
 <br>
 <br>
 <br> Reference: https://github.com/felixge/node-ar-drone
