@@ -96,7 +96,8 @@ catkin_make
 rosmake -a
 sudo apt-get install python-pyside
 ```
-<br>
+
+
 <br> Launch your package and make the drone fly
 ---------------------------------------------------
 <br> Now, you have successfully installed all we need. The next step is to connect with your Ardrone and make it fly!
