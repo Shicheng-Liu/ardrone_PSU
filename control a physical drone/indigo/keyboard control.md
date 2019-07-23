@@ -16,70 +16,86 @@ Here we go
 <br>  * Goto: Display. allocate 32MB of video memory to your virtual Ubuntu14.
 <br>
 <br> PS: If you find the resolution cannot match  your computer, you can open your terminal and follow these steps:
-<br> `$ xrandr`
-<br> Then you will see a list of resolutions to choose. Choose the one that matches your computer.
-<br> `$ xrandr -s yourchoice`
-<br>
-<br> If you cannot find the resolution you want, please follow these steps: (Take 1920x1080 as an example)
-<br> `cvt 1920 1080`
-<br> `xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync`
-<br> `xrandr --addmode Virtual1 "1920x1080_60.00"`
-<br> Then, go to the setting, find the _Display_ , you can see the choice 1920x1080, choose and apply.
+```
+$ xrandr
+```
+Then you will see a list of resolutions to choose. Choose the one that matches your computer.
+```
+$ xrandr -s yourchoice
+```
+ If you cannot find the resolution you want, please follow these steps: (Take 1920x1080 as an example)
+```
+cvt 1920 1080
+xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
+xrandr --addmode Virtual1 "1920x1080_60.00"
+```
+Then, go to the setting, find the `Display`, you can see the choice 1920x1080, choose and apply.
 <br>
 <br> You still need to add two codes
  to your /etc/profile
-<br> `sudo chmod 777 /etc/profile` 
-<br> `vim /etc/profile`
-<br> Then, add `xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync` and `xrandr --addmode Virtual1 "1920x1080_60.00"`
+```
+sudo chmod 777 /etc/profile
+vim /etc/profile
+```
+ Then, add `xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync` and `xrandr --addmode Virtual1 "1920x1080_60.00"`
 at the bottom. Use button _ESC_ and type in `:wq`, then _ENTER_.        FINISHED!
 <br>
 
 <br> ROS indigo installation
 ------------------------------
 <br> Since indigo is out of support now, we can only install with source code.
-<br> `sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'`
-<br> `sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB01FA116`
-<br> `sudo apt-get update`
-<br> If you find error reported in this step, please search in Google. It's a simple problem, easy to handle.
-<br> `sudo apt-get install ros-indigo-desktop-full`
-<br> `sudo rosdep init`
-<br> `rosdep update`
-<br> `echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc`
-<br> `source ~/.bashrc`
-<br> `sudo apt-get install python-rosinstall`
-<br>
+```
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB01FA116
+sudo apt-get update
+```
+If you find error reported in this step, please search in Google. It's a simple problem, easy to handle.
+```
+sudo apt-get install ros-indigo-desktop-full
+sudo rosdep init
+rosdep update
+echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+sudo apt-get install python-rosinstall
+```
 <br> For now, we have successfully installed ROS indigo. The next step is to build a workspace:
-<br> `mkdir -p ~/ros_workspace/src`
-<br> `cd ~/ros_workspace/`
-<br> `catkin_make`
-<br> `source devel/setup.bash`
-<br>
+```
+mkdir -p ~/ros_workspace/src
+cd ~/ros_workspace/
+catkin_make
+source devel/setup.bash
+```
+
 <br> Okay, now you have successfully installed ROS and built a workspace.
 <br>
 
 <br> Relevant packages installation
 -------------------------------------
 <br> We need to use keyboard to control the motion of the drone, so now we need two packages: _ardrone_autonomy_ and _ardrone_tutorials_
-<br> Here, we will install these two packages into your workspace just built, _ros_workspace_
-<br> `cd ros_workspace/src`
-<br> `sudo apt-get install ros-indigo-joystick-drivers python-rosinstall`
-<br> `sudo apt-get install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libpulse-dev libxt-dev openssh-server`
-<br> `cd ros_workspace/src`
-<br> `catkin_init_workspace`
-<br> `cd ..`
-<br> `catkin_make`
-<br> `source /home/server/ros_workspace/devel/setup.bash`
-<br> `echo "source /home/server/ros_workspace/setup.bash" >> ~/.bashrc`
-<br> **NOTE**: The username is _server_, if yours is not, please change it.
-<br> `cd /home/server/ros_workspace/src/`
-<br> `git clone https://github.com/AutonomyLab/ardrone_autonomy.git`
-<br> `git clone https://github.com/mikehamer/ardrone_tutorials.git`
-<br> `ls -la`
-<br> `cd /home/server/ros_workspace/`
-<br> `rosdep install --from-paths src -i`
-<br> `catkin_make`
-<br> `rosmake -a`
-<br> `sudo apt-get install python-pyside`
+<br> Here, we will install these two packages into your workspace just built, `ros_workspace`
+```
+cd ros_workspace/src
+sudo apt-get install ros-indigo-joystick-drivers python-rosinstall
+sudo apt-get install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libpulse-dev libxt-dev openssh-server
+cd ros_workspace/src
+catkin_init_workspace
+cd ..
+catkin_make
+source /home/server/ros_workspace/devel/setup.bash
+echo "source /home/server/ros_workspace/setup.bash" >> ~/.bashrc
+```
+ **NOTE**: The username is _server_, if yours is not, please change it.
+ ```
+cd /home/server/ros_workspace/src/
+git clone https://github.com/AutonomyLab/ardrone_autonomy.git
+git clone https://github.com/mikehamer/ardrone_tutorials.git
+ls -la
+cd /home/server/ros_workspace/
+rosdep install --from-paths src -i
+catkin_make
+rosmake -a
+sudo apt-get install python-pyside
+```
 <br>
 
 <br> Launch your package and make the drone fly
