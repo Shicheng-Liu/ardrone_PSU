@@ -8,15 +8,18 @@ How to make the ardrone2 recognize the environment and autopilot
 
 Setup your workspace
 --
-<br> First, you need to create a workspace _catkin_ws_ in your home directory or you can still use the workspace _ros_workspace_ we have already created in keyboard_control. 
-<br> Then go to the _src_ directory, Take _ros_workspace_ as an example:
-<br> `cd ros_workspace/src`
-<br> `git clone https://github.com/tum-vision/tum_ardrone.git`
-<br> `cd ..`
-<br> `rosdep install tum_ardrone`
-<br> Now, we need to edit a file to make tum_ardrone compatible with Ubuntu16:
+<br> First, you need to create a workspace `catkin_ws` in your home directory or you can still use the workspace `ros_workspace` we have already created in keyboard_control. 
+<br> Then go to the _src_ directory, Take `catkin_ws`as an example:
+```
+cd catkin_ws/src
+git clone https://github.com/tum-vision/tum_ardrone.git
+cd ..
+rosdep install tum_ardrone
+```
+ Now, we need to edit a file to make tum_ardrone compatible with Ubuntu16:
 <br> Search the file _RosThread.h_ in your computer, and then you need to add two lines: `#ifndef Q_MOC_RUN`, `#endif`
-<br> It will look like this after you have add these two lines:<br>
+<br> It will look like this after you have added these two lines:
+```
 #ifndef Q_MOC_RUN<br>
 #include "cvd/thread.h"<br>
 #include "tum_ardrone/filter_state.h"<br>
@@ -27,8 +30,9 @@ Setup your workspace
 #include "sensor_msgs/Joy.h"<br>
 #include "std_srvs/Empty.h"<br>
 #include "std_msgs/Empty.h"<br>
-#endif<br>
-<br> Then, you can `catkin_make`
+#endif
+```
+Then, you can `catkin_make`
 <br> Now, everything is done.
  <br>
  <br>
@@ -38,10 +42,12 @@ Setup your workspace
 <br> Connect with the WIFI of your ardrone
  <br> Then you should open a terminal: `roscore`
  <br> Open another terminal:
- <br> `cd catkin_ws`
- <br> `source devel/setup.bash`
- <br> `roslaunch tum_ardrone tum_ardrone.launch`
- <br> I do not like to add my path to _bashrc_, so I need to source my workspace everytime. If you find it annoying, you can export the path to your _bashrc_.
+ ```
+cd catkin_ws
+source devel/setup.bash
+roslaunch tum_ardrone tum_ardrone.launch
+```
+ I do not like to add my path to _bashrc_, so I need to source my workspace everytime. If you find it annoying, you can export the path to your _bashrc_.
 <br>  You will see three windows on your desktop, load the file _initDemo.txt_ in your **drone_gui** window, then click **reset** followed
 by **clear and send**.
 <br> Then, you will see the drone to takeoff, fly around and finally stabilize at its original location, at the meanwhile, the video will show many points and the 3D map will show the same points and the track of your drone. Choose one point on your video and click it, the drone will move to a specific location that aligns the point you just clicks.
