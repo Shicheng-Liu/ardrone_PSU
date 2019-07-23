@@ -34,3 +34,6 @@ sphinx_client.TriggerAction(
 drone(TakeOff()).wait()
 ```
 This script is a _takeoff_ you can directly use. I will show  `Circle.py` where you can see more details.
+<br> The options of the parameter in _Circle()_:
+<br> 0: _Clockwise_
+<br> 1: _counter  Clockwise_
