@@ -79,19 +79,21 @@ Create your workspace
 ====
 <br> **server is my username, if yours is different, please change it to yours**
 ```
-mkdir /home/server/ros_workspace/src/
-cd /home/server/ros_workspace/src/
+mkdir ros_workspace
+cd ros_workspace
+mkdir src
+cd src
 catkin_init_workspace
-cd /home/server/ros_workspace/
+cd ..
 catkin_make
-source /home/server/ros_workspace/devel/setup.bash
+source devel/setup.bash
 ```
 Configure ardrone_tutorials package
 ```
-cd /home/server/ros_workspace/src/
+cd src
 git clone https://github.com/mikehamer/ardrone_tutorials.git
 ls -la
-cd /home/server/ros_workspace/
+cd ..
 catkin_make
 rosmake -a
 sudo apt-get install python-pyside
