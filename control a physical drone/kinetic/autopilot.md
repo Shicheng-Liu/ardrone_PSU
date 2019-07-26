@@ -39,6 +39,20 @@ Then, you can `catkin_make`
  
  Work on your Ardrone2 now
  ------
+ <br> First, we need to invoke `ardrone_driver` in you `tum_ardrone.launch`:
+ <br> Open the file `tum_ardrone.launch` and add this line `<include file="$(find tum_ardrone)/launch/ardrone_driver.launch"/>`
+<br> The file will end looking like this:
+```
+<launch>
+<include file="$(find tum_ardrone)/launch/ardrone_driver.launch"/>
+  <node name="drone_stateestimation" pkg="tum_ardrone" type="drone_stateestimation">
+  </node>
+  <node name="drone_autopilot" pkg="tum_ardrone" type="drone_autopilot">
+  </node>
+  <node name="drone_gui" pkg="tum_ardrone" type="drone_gui">
+  </node>
+</launch>
+```
 <br> Connect with the WIFI of your ardrone
  <br> Then you should open a terminal: `roscore`
  <br> Open another terminal:
